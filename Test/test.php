@@ -1,16 +1,19 @@
 <?php
 
-require ('./BaseXClient.php');
+require ('../potatoWebPage/BaseXClient.php');
 
 try {
   // create session
   $session = new Session("localhost", 1984, "admin", "admin");
-  
+ 
   try {
+    
+    
+    $input = 'for $name in collection("C:\xampp\htdocs\Rotten_Potatoes\BaseX912\basex\test.xml")/tests/test where $name[matches($name, \'Luis\')]return $name';
     // create query instance
     $query = $session->query($input);
     // bind variable
-    $query->bind("name", "number");
+    
     // print results
     print $query->execute()."\n";
     // close query instance

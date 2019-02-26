@@ -1,5 +1,5 @@
 # Paths
-INPUTPATH = C:/xampp/htdocs/curso_php/pruebas/test.xml
+INPUTPATH = C:/xampp/htdocs/Rotten_Potatoes/BaseX912/basex/test.xml
 DATAPATH = C:\Users\franl\Downloads\BaseX912\basex\
 WORKPATH = C:/xampp/htdocs/Rotten_Potatoes/Test/
 PROJECTPATH = C:/Users/franl/Downloads/BaseX912/basex/
@@ -90,9 +90,10 @@ XQUERY = 0
 # Files
 EDITOR = 1
 EDITOR1 = C:/Users/franl/Downloads/BaseX912/basex/.basex
-INPUTS = 2
-INPUTS1 = C:/xampp/htdocs/curso_php/pruebas/test.xml
-INPUTS2 = C:\Users\franl\Downloads\BaseX912\basex\
+INPUTS = 3
+INPUTS1 = C:/xampp/htdocs/Rotten_Potatoes/BaseX912/basex/test.xml
+INPUTS2 = C:/xampp/htdocs/curso_php/pruebas/test.xml
+INPUTS3 = C:\Users\franl\Downloads\BaseX912\basex\
 OPEN = 0
 PROJECTS = 0
 PROJFILES = 0

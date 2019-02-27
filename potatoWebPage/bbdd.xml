@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bbdd>
+    <users>
+        <username>root</username>
+        <password>root</password>
+    </users>
+    <news>
+        <new title="holder">Esta es una noticia</new>
+    </news>
+</bbdd>

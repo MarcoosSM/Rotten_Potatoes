@@ -1,9 +1,9 @@
 <?php
     include('session.php');
 
-    require('../content/views/header.php');
+    require('../views/header.php');
 
-    require('../content/views/body.php');
+    require('../views/body.php');
 
-    require('../content/views/footer.php');
+    require('../views/footer.php');
 ?>

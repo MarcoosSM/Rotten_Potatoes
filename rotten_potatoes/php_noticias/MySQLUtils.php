@@ -10,9 +10,7 @@ class MySQLUtils{
         $statement = self::$session->prepare('SELECT titulo,noticia FROM noticias');
         $statement->execute();
         $resultado = $statement->fetchAll();
-        foreach ($resultado as &$noticia){
-          #  echo $noticia[0].$noticia[1];
-        }
+        
 		return $resultado;
             
     }

@@ -14,6 +14,17 @@ class MySQLUtils{
 		return $resultado;
             
     }
+    static function deleteNew($id){
+        $statement = self::$session->prepare('DELETE FROM noticias where id = :id LIMIT 1');
+        $statement->execute(array(':id' => $id));
+            
+    }
+    static function modifyNew($id, $titulo, $contenido){
+        $statement = self::$session->prepare('UPDATE FROM noticias SET titulo = :titulo, noticia = :contenido where id = :id LIMIT 1');
+        $statement->bindParam(':titulo', $titulo);
+        $statement->bindParam(':contenido', $contenido); 
+            
+    }
     
     static function StartSession() {
 		self::$session = new PDO('mysql:host=192.168.3.50;dbname=rottenpotatoes_db', 'invitado', '1234');

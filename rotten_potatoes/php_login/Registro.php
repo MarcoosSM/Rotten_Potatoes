@@ -22,7 +22,7 @@
       } else if ($_POST['password'] != $_POST['password2']) {
         $error = "Las contraseñas no coinciden";
       } else {          
-        $sql = "INSERT INTO usuarios (LOGIN, PASS) VALUES ('$myusername', '$hashedpass')";
+        $sql = "INSERT INTO usuarios (LOGIN, PASS, PRIVILEGES) VALUES ('$myusername', '$hashedpass', 1)";
         $result = mysqli_query($db,$sql);
         $_SESSION['login_user'] = $myusername;
         header("location: Login.php");

@@ -9,8 +9,8 @@
 </head>
 <body>
     <div class="div_main">
-        <div style = "width:300px; border: solid 1px #333333; ">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;">
+        <div class="div_container">
+            <div class="div_titulo">
                 <b>Registro</b>
             </div>	
             <div style = "margin:37px">

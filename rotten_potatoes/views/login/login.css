@@ -15,3 +15,10 @@ label {
 .div_main{
     margin:auto;
 }
+.div_container{
+    width:300px;
+    border: solid 1px #333333;
+}
+.div_titulo {
+    background-color:#333333; color:#FFFFFF; padding:3px;
+}

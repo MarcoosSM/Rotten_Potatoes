@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
-   <div class="div_main"><div style = "width:300px; border: solid 1px #333333;">
-      <div style = "background-color:#333333; color:#FFFFFF; padding:3px;">
-         <b>Inicio de sesión</b>
-      </div>
+   <div class="div_body">
+      <div class="div_container">
+         <div class="div_titulo">
+            <b>Inicio de sesión</b>
+         </div>
       <div style = "margin:35px">
          <form action = "" method = "post">
             <label>Usuario:</label>

@@ -11,8 +11,9 @@ class MySQLUtils{
         $statement->execute();
         $resultado = $statement->fetchAll();
         foreach ($resultado as &$noticia){
-            echo $noticia[0].$noticia[1];
+          #  echo $noticia[0].$noticia[1];
         }
+		return $resultado;
             
     }
     
@@ -22,7 +23,7 @@ class MySQLUtils{
 	}
 	
 	static function CloseSesssion() {		
-		self::$session->close();
+		self::$session=null;
 	}
     
 }

@@ -118,6 +118,9 @@ body{
   border-radius: 4px;
   margin: 5px auto;
 }
+.noticia{
+  width: 70%;
+}
 
 /* ---- FOOTER ---- */
 .footer {
@@ -132,4 +135,7 @@ body{
   font-family: 'Comic Sans MS';
   font-weight: bold;
   font-style: italic;
+}
+hr{
+	border-top: 1px solid #977350;
 }

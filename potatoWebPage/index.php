@@ -5,9 +5,13 @@
 
     require('views/footer.php');
 
-	require('BaseXUtils.php');	
-	
-	BaseXUtils::StartSesssion();
+	#require('BaseXUtils.php');	
+    
+    require('MySQLUtils.php');
 
-	echo BaseXUtils::ExecuteQuery('for $name in collection("C:\xampp\htdocs\Rotten_Potatoes\BaseX912\basex\test.xml")/tests/test where $name[matches($name, \'Luis\')]return $name');
+	#BaseXUtils::StartSesssion();
+    MySQLUtils::StartSession();
+    MySQLUtils::getNew();
+    
+	#echo BaseXUtils::ExecuteQuery('for $name in collection("C:\xampp\htdocs\Rotten_Potatoes\BaseX912\basex\test.xml")/tests/test where $name[matches($name, \'Luis\')]return $name');
 ?>

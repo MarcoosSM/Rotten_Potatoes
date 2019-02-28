@@ -28,53 +28,5 @@
         header("location: Login.php");
       }
    }
+   require('../views/login/registro.view.php');
 ?>
-<html>
-   <head>
-      <title>Marcos Solance Martín</title>
-      <style type = "text/css">
-         body {
-            font-family:Arial, Helvetica, sans-serif;
-            font-size:14px;
-         }
-         label {
-            font-weight:bold;
-            width:100px;
-            font-size:14px;
-         }
-         .box {
-            border:#666666 solid 1px;
-         }
-      </style>
-      
-   </head>
-   
-   <body bgcolor = "#FFFFFF">
-	
-      <div align = "center">
-         <div style = "width:300px; border: solid 1px #333333; " align = "left">
-            <div style = "background-color:#333333; color:#FFFFFF; padding:3px;"><b>Registro</b></div>
-				
-            <div style = "margin:37px">
-               
-               <form action = "" method = "post">
-                  <label>Usuario:</label><input type = "text" name = "username" class = "box"/><br /><br />
-                  <label>Contraseña:</label><input type = "password" name = "password" class = "box" /><br/><br />
-                  <label>Repetir Contraseña:</label><input type = "password" name = "password2" class = "box" /><br/><br />
-                  <input type = "submit" value = " Registrarse "/><br />
-               </form>
-               
-               <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
-					
-               <p> 
-                ¿Ya tienes cuenta? <a href="Login.php">Iniciar Sesión</a>
-               </p>
-
-            </div>
-				
-         </div>
-			
-      </div>
-
-   </body>
-</html>

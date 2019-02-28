@@ -22,7 +22,7 @@ body{
 /* Custom font */
 @font-face {
     font-family: "Happy Potatoes";
-    src: url(../fonts/Happy_Potatoes.ttf) format("truetype");
+    src: url(../content/fonts/Happy_Potatoes.ttf) format("truetype");
 }
 
 .header a.logo {

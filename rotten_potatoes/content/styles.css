@@ -1,0 +1,136 @@
+body {
+    background-color: #DF7401;
+    font-family: "Arial";
+    font-size: 14px;
+}
+
+#content {
+    width: 960px;
+    margin: 10px auto auto auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+#header {
+    padding: 5px 20px;
+    width: 920px;
+    height: 150px;
+    position: relative;
+}
+
+#logo {
+    width: 150px;
+    float: left;
+}
+
+#search {
+    width: 185px;
+    border: 1px solid #DF7401;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 3px;
+}
+
+#searchbox {
+    width: 180px;
+    height: 20px;
+    font-style: italic;
+    padding: 0px 0px 0px 5px;
+    background-image: url(images/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+#boton {
+    display: none;
+}
+
+#menu {
+    font-size: 16px;
+    text-align: center;
+    float: left;
+    width: 925px;
+    height: 45px;
+}
+
+.hipervinculos {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.celda {
+    background-image: url(images/button.jpg);
+}
+
+.menuHover:hover {
+    color: black;
+    background-color: #F6E3CE;
+    background-image: none;
+}
+
+#slider {
+    position: relative;
+    width: 905px;
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 358px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+#fIzq {
+    top: 140px;
+    left: 0px;
+}
+
+#fDer {
+    top: 140px;
+    right: 0px;
+}
+
+.flechas {
+    position: absolute;
+}
+
+.flechas:hover {
+    background-color: whitesmoke;
+}
+
+.items {
+    width: 270px;
+    padding: 20px 20px 20px 20px;
+    float: left;
+    margin-left: 8px;
+}
+
+.items:hover {
+    background-color: #e6e6e6;
+}
+
+.itemsImg {
+    height: 130px;
+    width: 130px;
+    margin: 0 auto;
+    display: block;
+}
+
+h2 {
+    color: #B43104;
+}
+
+p {
+    text-align: justify;
+    color: #848484;
+}
+
+#footer {
+    float: left;
+    background-color: #e6e6e6;
+    width: 920px;
+    padding: 20px 20px 20px 20px;
+    margin-top: 10px;
+}

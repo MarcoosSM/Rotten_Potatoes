@@ -22,7 +22,7 @@ class MySQLUtils{
     static function modifyNew($id, $titulo, $contenido){
         $statement = self::$session->prepare('UPDATE FROM noticias SET titulo = :titulo, noticia = :contenido where id = :id LIMIT 1');
         $statement->bindParam(':titulo', $titulo);
-        $statement->bindParam(':contenido', $contenido)
+        $statement->bindParam(':contenido', $contenido); 
             
     }
     

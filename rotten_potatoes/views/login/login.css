@@ -11,3 +11,7 @@ label {
 .box {
     border:#666666 solid 1px;
 }
+
+.div_main{
+    margin:auto;
+}

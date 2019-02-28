@@ -21,7 +21,7 @@
         $error = "Rellena los campos vacios";
       } else if ($_POST['password'] != $_POST['password2']) {
         $error = "Las contraseñas no coinciden";
-      }else {          
+      } else {          
         $sql = "INSERT INTO usuarios (LOGIN, PASS) VALUES ('$myusername', '$hashedpass')";
         $result = mysqli_query($db,$sql);
         $_SESSION['login_user'] = $myusername;

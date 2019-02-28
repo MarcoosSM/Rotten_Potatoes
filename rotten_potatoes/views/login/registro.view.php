@@ -5,22 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registro</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../views/login/login.css">
 </head>
 <body>
-    <div class="div_main">
+    <div class="div_body">
         <div class="div_container">
             <div class="div_titulo">
                 <b>Registro</b>
             </div>	
-            <div style = "margin:37px">
+            <div class="div_form">
                 <form action = "" method = "post">
-                    <label>Usuario:</label><input type = "text" name = "username" class = "box"/><br /><br />
-                    <label>Contraseña:</label><input type = "password" name = "password" class = "box" /><br/><br />
-                    <label>Repetir Contraseña:</label><input type = "password" name = "password2" class = "box" /><br/><br />
-                    <input type = "submit" value = " Registrarse "/><br />
+                    <label>Usuario: </label>
+                    <input type="text" name="username" class="inputBox"/><br/><br/>
+                    <label>Contraseña:</label>
+                    <input type="password" name="password" class="inputBox"/><br/><br/>
+                    <label>Repetir Contraseña:</label>
+                    <input type="password" name="password2" class="inputBox"/><br/><br/>
+                    <input type = "submit" value = " Registrarse "/><br/>
                 </form>
-                <div style = "font-size:11px; color:#cc0000; margin-top:10px">
+                <div class="div_error">
                     <?php echo $error; ?>
                 </div>
                 <p>¿Ya tienes cuenta? <a href="Login.php">Iniciar Sesión</a></p>

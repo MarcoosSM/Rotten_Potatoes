@@ -27,7 +27,7 @@ class MySQLUtils{
     }
     
     static function StartSession() {
-		self::$session = new PDO('mysql:host=192.168.3.50;dbname=rottenpotatoes_db', 'invitado', '1234');
+		self::$session = new PDO('mysql:host=localhost;dbname=rottenpotatoes_db', 'root', '');
 
 	}
 	

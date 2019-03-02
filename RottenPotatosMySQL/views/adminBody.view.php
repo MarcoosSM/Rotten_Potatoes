@@ -11,10 +11,10 @@
 			
 				foreach ($noticias as &$noticia) {
 					echo '<div class="noticia">';
-                    echo '<form action = "./php_noticias/modificarNoticia.php" method = "post">';
+                    echo '<form action = "../php_noticias/modificarNoticia.php" method = "post">';
                     echo '	<h3>'. $noticia[0].'</h3>';
 					echo '	<p>'.$noticia[1].'</p>';
-                    echo '	<input type="submit" value="Modificar" name='.$noticia[0]'/>';
+                    echo '	<input type="submit" value="Modificar" name='.$noticia[0].'/>';
                     echo '</form>';
 					echo '</div>';
 					echo '<hr/>';

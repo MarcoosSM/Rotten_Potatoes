@@ -22,12 +22,14 @@
 			?>
         </div>
         <div class="paginacion">
-            <a href="#">&laquo;</a>
-            <a class="active" href="#">1</a></li>
-            <a href="#">2</a></li>
-            <a href="#">3</a></li>
-            <a href="#">4</a></li>
-            <a href="#">5</a></li>
-            <a href="#">&raquo;</a>
+            <?php 
+                for ($i = 1; $i <= $numPaginas; $i++) {
+                    if($i==$paginaActual){
+                       echo " <a class='active' href='?pagina=$i'>$i</a></li>";
+                    }else{
+                        echo " <a href='?pagina=$i'>$i</a></li>";
+                    }
+                }
+            ?>
         </div>
 </div>

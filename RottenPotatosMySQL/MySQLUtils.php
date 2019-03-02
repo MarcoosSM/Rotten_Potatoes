@@ -7,7 +7,7 @@ class MySQLUtils{
 
     
     static function getNew(){
-        $statement = self::$session->prepare('SELECT titulo,noticia FROM noticias');
+        $statement = self::$session->prepare('SELECT id,titulo,noticia FROM noticias');
         $statement->execute();
         $resultado = $statement->fetchAll();
         

@@ -19,9 +19,7 @@
                 </form>
             </div>
             <a class="active" href="../Index.php">Home</a>
-            <a href="#movies">Películas</a>
             <a href="#news">Noticias</a>
-            <a href="#tickets">Entradas</a>
         </div>
     </div>
 

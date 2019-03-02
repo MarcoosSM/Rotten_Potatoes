@@ -1,16 +1,4 @@
 <div class="noticiasRecientes paginacion">
-    <section class="paginacion">
-        <ul>
-            <li class="disabled"><a href="#">&laquo;</a></li>
-            <li class="active"><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-            
-        </ul>
-    </section>
         <h2>Noticias Recientes</h2>
         <div class="contenidoCentral">
             <?php
@@ -32,5 +20,14 @@
                echo "No se han encontrado noticias";
             }
 			?>
+        </div>
+        <div class="paginacion">
+            <a href="#">&laquo;</a>
+            <a class="active" href="#">1</a></li>
+            <a href="#">2</a></li>
+            <a href="#">3</a></li>
+            <a href="#">4</a></li>
+            <a href="#">5</a></li>
+            <a href="#">&raquo;</a>
         </div>
 </div>

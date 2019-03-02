@@ -77,28 +77,29 @@ body{
 }
 
 /* ---- ARTICLES ---- */
-.paginacion ul .active a{
-    background: #ce7f08;
+.paginacion {
+  display: inline-block;
 }
-.paginacion ul .disabled{
-    background: #c8c8c8;
-    display: : inline-block;
-    padding: 15px 25px;
-    cursor: not-allowed;
-    color: #fff;
+
+.paginacion a { 
+  float: left;
+  background: #977350;
+  margin: 0 4px;
+  padding: 15px 25px;
+  cursor: not-allowed;
+  color: #fff;
+  text-decoration: none;
+}
+.paginacion a.active {
+    background: #D38D47;
+    color: white;
+}
+
+.paginacion a:hover{
     text-decoration: none;
+    background: #ECD5BE;
 }
-.paginacion ul li a{
-    display: inline-block;
-    padding: 15px 25px;
-    color: #fff;
-    text-decoration: none;
-    background: #424242;
-}
-.paginacion ul li a:hover{
-    text-decoration: none;
-    background: #3299bb;
-}
+
 .noticiasRecientes {
   width: 85%;
   background-color: #977350;

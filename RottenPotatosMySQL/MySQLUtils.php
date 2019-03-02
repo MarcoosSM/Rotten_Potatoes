@@ -54,7 +54,7 @@ class MySQLUtils{
             
     }
     static function modifyNew($id, $titulo, $contenido){
-        $statement = self::$session->prepare('UPDATE FROM noticias SET id = :id, titulo = :titulo, noticia = :contenido where id = :id LIMIT 1');
+        $statement = self::$session->prepare('UPDATE noticias SET id = :id, titulo = :titulo, noticia = :contenido where id = :id LIMIT 1');
         $statement->execute(array(':id' => $id, ':titulo' => $titulo, ':contenido' => $contenido));
             
     }

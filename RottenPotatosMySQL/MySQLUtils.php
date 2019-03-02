@@ -35,6 +35,19 @@ class MySQLUtils{
             
     }
     
+        static function numeroDeNoticias(){
+        
+        $statement= self::$session->prepare("SELECT count(*) FROM noticias");
+        $statement->execute();
+        $resultado = $statement->fetch(PDO::FETCH_NUM);
+        $numeroDeNoticias = $resultado[0];
+        
+        return $numeroDeNoticias;
+            
+    }
+    
+
+    
     static function deleteNew($id){
         $statement = self::$session->prepare('DELETE FROM noticias where id = :id LIMIT 1');
         $statement->execute(array(':id' => $id));

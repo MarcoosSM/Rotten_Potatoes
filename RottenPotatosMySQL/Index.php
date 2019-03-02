@@ -3,6 +3,6 @@
 if(isset($_SESSION['login_user'])){
     header('Location: Contenido.php');
 }else {
-    header('Location: ./php_login/Login.php');
+    header('Location: php_login/Login.php');
 }
 ?>

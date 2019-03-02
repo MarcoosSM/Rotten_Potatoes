@@ -6,10 +6,10 @@ $noticias = MySQLUtils::getNew();
 if(!empty($_POST)){
     if(isset($_POST['Modificar'])){
         MySQLUtils::modifyNew($_POST['id'], $_POST['titulo'], $_POST['noticia']);
-        echo $_POST['id']."  ".$_POST['titulo']."    ".$_POST['noticia'];
-        #header('Location: ../index.php');
+        header('Location: ../index.php');
     }elseif(isset($_POST['Eliminar'])){
-        
+        MySQLUtils::deleteNew($_POST['id']);
+        header('Location: ../index.php');
     }
 }
 
@@ -25,9 +25,11 @@ if(!empty($_POST)){
                 echo '</form>';
                 
             }elseif($_POST[$noticia[0]] == "Eliminar"){
-                $id = $_POST[$noticia[0]];
-                echo '<input type="text" name="titulo" value="'.$noticia[1].'"/>';
+                echo '<form action="'. htmlspecialchars($_SERVER["PHP_SELF"]) .'" method="POST">';
+                echo '<input type="text" value="'.$noticia[0].'" name="id" style="display:none;"/>';
+                echo '<label>'.$noticia[1].'</label>';
                 echo '<input type=submit value="Enviar" name="Eliminar"/>';
+                echo '</form>';
             }
         }
         

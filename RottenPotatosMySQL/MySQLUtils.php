@@ -6,8 +6,16 @@ class MySQLUtils{
     static private $session;
 
     
-    static function getNew(){
-        $statement = self::$session->prepare('SELECT id,titulo,noticia FROM noticias');
+    static function getNewPaginacion($ini, $fin ){
+        $statement = self::$session->prepare("SELECT id,titulo,noticia FROM noticias LIMIT $ini,$fin");
+        $statement->execute();
+        $resultado = $statement->fetchAll();
+        
+		return $resultado;
+            
+    }
+        static function getNew(){
+        $statement = self::$session->prepare("SELECT id,titulo,noticia FROM noticias");
         $statement->execute();
         $resultado = $statement->fetchAll();
         

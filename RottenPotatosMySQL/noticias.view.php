@@ -3,13 +3,15 @@
         <div class="contenidoCentral">
             <?php
 				foreach ($noticias as &$noticia) {
-					echo '<div class="noticia">';
-					echo '	<h3>'. $noticia[1].'</h3>';
-					echo '	<p>'.$noticia[2].'</p>';
-					echo '</div>';
+					echo '<noticias class="noticia">';
+					echo '	<h3>'. $noticia[0].'</h3>';
+					echo '	<p>'.$noticia[1].'</p>';
+					echo '</noticias>';
 					echo '<hr/>';
 				}
 			
+				
+					
 			?>
         </div>
 </div>

@@ -1,8 +1,8 @@
 <?php
 	require BaseXUtils.php;
 
-	$title = $_POST["title"];
-	$content = $_POST["content"];
+	$title = $_POST["titulo"];
+	$content = $_POST["noticia"];
 
 	#imodificar en la base de datos 
 

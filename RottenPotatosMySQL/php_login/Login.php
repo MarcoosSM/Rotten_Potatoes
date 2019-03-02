@@ -16,7 +16,7 @@
       if (password_verify($mypassword, $hashedpass)) {
         $_SESSION['login_user'] = $myusername;
         $_SESSION['login_privileges'] = $privileges;
-        header("location: Contenido.php");
+        header("location: ../index.php");
       } else {
          $error = "Usuario o contraseña incorrectos";
       }

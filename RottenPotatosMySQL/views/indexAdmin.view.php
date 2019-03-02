@@ -13,15 +13,13 @@
         <a href="#default" class="logo">ROTTEN POTATOES</a>
         <div class="header-right">
             <div class="search-container">
-                <form action="/action_page.php">
+                <form action="php_noticias/buscarNoticias.php" method="get">
                     <input type="text" placeholder="Search..." name="search">
                     <button type="submit"><i class="fa fa-search"></i></button>
                 </form>
             </div>
             <a class="active" href="#home">Home</a>
-            <a href="#movies">Películas</a>
             <a href="#news">Noticias</a>
-            <a href="#tickets">Entradas</a>
         </div>
     </div>
 

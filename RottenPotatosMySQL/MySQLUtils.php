@@ -14,6 +14,19 @@ class MySQLUtils{
 		return $resultado;
             
     }
+    
+    static function getNewByKeyWords($keyWords){
+        
+        $keyWords = '%'.$keyWords.'%';
+        
+        $statement = self::$session->prepare('SELECT id,titulo,noticia FROM noticias WHERE titulo LIKE :input1 OR noticia LIKE :input2');
+        $statement->execute(array(':input1' => $keyWords, ':input2' => $keyWords));
+        $resultado = $statement->fetchAll();
+        
+		return $resultado;
+            
+    }
+    
     static function deleteNew($id){
         $statement = self::$session->prepare('DELETE FROM noticias where id = :id LIMIT 1');
         $statement->execute(array(':id' => $id));

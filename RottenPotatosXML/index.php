@@ -1,17 +1,11 @@
-<?php
-    require('views/header.php');
-
-    require('views/body.php');
-
-    require('views/footer.php');
-
-	#require('BaseXUtils.php');	
-    
-    require('MySQLUtils.php');
-
-	#BaseXUtils::StartSesssion();
-    MySQLUtils::StartSession();
-    MySQLUtils::getNew();
-    
-	#echo BaseXUtils::ExecuteQuery('for $name in collection("C:\xampp\htdocs\Rotten_Potatoes\BaseX912\basex\test.xml")/tests/test where $name[matches($name, \'Luis\')]return $name');
+<?php session_start();
+if(isset($_SESSION['login_user'])){
+   if($_SESSION['login_privileges'] == 1){
+        header('Location: Contenido.php');
+   }elseif($_SESSION['login_privileges'] == 2){
+        header('Location: ContenidoAdmin.php');
+   }
+}else {
+    header('Location: php_login/Login.php');
+}
 ?>

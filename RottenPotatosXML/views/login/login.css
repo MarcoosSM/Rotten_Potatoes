@@ -1,0 +1,32 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:14px;
+    background-color: #FFFFFF
+}
+label {
+    font-weight:bold;
+    width:100px;
+    font-size:14px;
+}
+.inputBox {
+    border:#666666 solid 1px;
+}
+
+.div_main{
+    margin:auto;
+}
+.div_container{
+    width:300px;
+    border: solid 1px #333333;
+}
+.div_titulo {
+    background-color:#333333; color:#FFFFFF; padding:3px;
+}
+.div_form {
+    margin:35px;
+}
+.div_error {
+    font-size:11px;
+    color:#cc0000;
+    margin-top:10px;
+}

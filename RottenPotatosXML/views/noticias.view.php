@@ -1,24 +1,35 @@
-<div class="noticiasRecientes">
+<div class="noticiasRecientes paginacion">
         <h2>Noticias Recientes</h2>
         <div class="contenidoCentral">
             <?php
-				require('./MySQLUtils.php');
-				MySQLUtils::StartSession();
-			
-				$noticias = MySQLUtils::getNew();
-			
-				#$noticias = array(array("Titulo1","contenido1"),array("Titulo2","contenido2"));
-			
-				foreach ($noticias as &$noticia) {
-					echo '<div class="noticia">';
-					echo '	<h3>'. $noticia[0].'</h3>';
-					echo '	<p>'.$noticia[1].'</p>';
-					echo '</div>';
-					echo '<hr/>';
-				}
-			
-				MySQLUtils::CloseSesssion();
-					
+            if(isset($noticias)){
+                if((sizeof ($noticias))>0){
+                    foreach ($noticias as &$noticia) {
+                        echo '<div class="noticia">';
+                        echo '	<h3>'. $noticia[1].'</h3>';
+                        echo '	<p>'.$noticia[2].'</p>';
+                        echo '</div>';
+                        echo '<hr/>';
+                    }
+                        
+                }else{
+                    echo "No se han encontrado noticias";
+                }
+
+            }else{
+               echo "No se han encontrado noticias";
+            }
 			?>
+        </div>
+        <div class="paginacion">
+            <?php 
+                for ($i = 1; $i <= $numPaginas; $i++) {
+                    if($i==$paginaActual){
+                       echo " <a class='active' href='?pagina=$i'>$i</a></li>";
+                    }else{
+                        echo " <a href='?pagina=$i'>$i</a></li>";
+                    }
+                }
+            ?>
         </div>
 </div>

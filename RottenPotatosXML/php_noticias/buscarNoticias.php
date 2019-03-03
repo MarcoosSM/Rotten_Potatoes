@@ -1,13 +1,13 @@
 <?php 
     if( $_GET["search"]){
 
-        require('../MySQLUtils.php');
+        require('../BaseXUtils.php');
 
-        MySQLUtils::StartSession();
+        BaseXUtils::StartSession();
 
-        $noticias = MySQLUtils::getNewByKeyWords($_GET["search"]);
+        $noticias = BaseXUtils::getNewByKeyWords($_GET["search"]);
 
-        MySQLUtils::CloseSesssion();
+        BaseXUtils::CloseSesssion();
 
       
     }

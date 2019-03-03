@@ -1,12 +1,12 @@
 <?php 
 
-    require('MySQLUtils.php');
+    require('BaseXUtils.php');
 
-    MySQLUtils::StartSession();
+    BaseXUtils::StartSession();
     
-    $noticias = MySQLUtils::getNew();
+    $noticias = BaseXUtils::getNew();
 
-    MySQLUtils::CloseSesssion();
+    BaseXUtils::CloseSesssion();
 
     require('views/noticiasAdmin.view.php')
 

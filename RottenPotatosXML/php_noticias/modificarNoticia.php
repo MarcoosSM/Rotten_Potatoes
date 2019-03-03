@@ -1,14 +1,14 @@
 <?php
-require('../MySQLUtils.php');
-MySQLUtils::StartSession();
-$noticias = MySQLUtils::getNew();
+require('../BaseXUtils.php');
+BaseXUtils::StartSession();
+$noticias = BaseXUtils::getNew();
 
 if(!empty($_POST)){
     if(isset($_POST['Modificar'])){
-        MySQLUtils::modifyNew($_POST['id'], $_POST['titulo'], $_POST['noticia']);
+        BaseXUtils::modifyNew($_POST['id'], $_POST['titulo'], $_POST['noticia']);
         header('Location: ../index.php');
     }elseif(isset($_POST['Eliminar'])){
-        MySQLUtils::deleteNew($_POST['id']);
+        BaseXUtils::deleteNew($_POST['id']);
         header('Location: ../index.php');
     }
 }

@@ -7,11 +7,13 @@ class MySQLUtils{
 
     
     static function getNewPaginacion($ini, $fin ){
-        $statement = self::$session->prepare("SELECT id,titulo,noticia FROM noticias LIMIT $ini,$fin");
-        $statement->execute();
-        $resultado = $statement->fetchAll();
         
-		return $resultado;
+        $arrayAllNews = self::getNew();
+        $arraySelectedNews = array();
+        for($i = $ini; $i <= $fin; ++$i){
+            $arraySelectedNews = $arrayAllNews[$i];
+        }
+		return $arraySelectedNews;
             
     }
         static function getNew(){

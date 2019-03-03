@@ -11,16 +11,23 @@ class BaseXUtils{
     }
     
     static function getNew(){
-        return self::$session->query('for $new in doc(\'../potatoWebPage/bbdd.xml\')//bbdd//news//new return $new')
+        return self::$session->query('for $new in doc(\'../RottenPotatosXML/bbdd.xml\')//bbdd//news//new return $new')
     }
     
+	static function getNewPaginacion($ini, $fin ){
+        $statement = self::$session->prepare("SELECT id,titulo,noticia FROM noticias LIMIT $ini,$fin");
+        $statement->execute();
+        $resultado = $statement->fetchAll();
+        
+		return $resultado;
+            
+    }
     
-	static function ExecuteQuery($queryStr) {
-		echo "test2";
-		$query = self::$session->query($queryStr);
-		return $query->execute();
-		
-	}
+    static function getNewByKeyWords($keyWords){
+        
+      return self::$session->query('for $new in doc(\'../RottenPotatosXML/bbdd.xml\')//bbdd//news//new where $new[text() contains text { '.$keyWords.' } any] return $new');
+            
+    }
 	
 	static function StartSesssion() {
 		self::$session = new Session("localhost", 1984, "admin", "admin");

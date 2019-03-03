@@ -1,5 +1,5 @@
 # Paths
-INPUTPATH = C:/xampp/htdocs/Rotten_Potatoes/RottenPotatosXMLAntigua/bbdd.xml
+INPUTPATH = C:/xampp/htdocs/Rotten_Potatoes/RottenPotatosXML/bbdd.xml
 DATAPATH = C:\Users\franl\Downloads\BaseX912\basex\
 WORKPATH = C:/xampp/htdocs/Rotten_Potatoes/Test/
 PROJECTPATH = C:/Users/franl/Downloads/BaseX912/basex/
@@ -89,11 +89,12 @@ XQUERY = 0
 
 # Files
 EDITOR = 0
-INPUTS = 4
-INPUTS1 = C:/xampp/htdocs/Rotten_Potatoes/RottenPotatosXMLAntigua/bbdd.xml
-INPUTS2 = C:/xampp/htdocs/Rotten_Potatoes/BaseX912/basex/test.xml
-INPUTS3 = C:/xampp/htdocs/curso_php/pruebas/test.xml
-INPUTS4 = C:\Users\franl\Downloads\BaseX912\basex\
+INPUTS = 5
+INPUTS1 = C:/xampp/htdocs/Rotten_Potatoes/RottenPotatosXML/bbdd.xml
+INPUTS2 = C:/xampp/htdocs/Rotten_Potatoes/RottenPotatosXMLAntigua/bbdd.xml
+INPUTS3 = C:/xampp/htdocs/Rotten_Potatoes/BaseX912/basex/test.xml
+INPUTS4 = C:/xampp/htdocs/curso_php/pruebas/test.xml
+INPUTS5 = C:\Users\franl\Downloads\BaseX912\basex\
 OPEN = 0
 PROJECTS = 0
 PROJFILES = 0

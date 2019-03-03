@@ -1,13 +1,13 @@
 <?php 
 
-    require('MySQLUtils.php');
+    require('BaseXUtils.php');
 
-    MySQLUtils::StartSession();
+    BaseXUtils::StartSession();
     
 
     $paginaActual = 1;
     $postPorPagina = 5;
-    $numTotalPaginas = MySQLUtils::numeroDeNoticias();
+    $numTotalPaginas = BaseXUtils::numeroDeNoticias();
         
     if (isset($_GET["pagina"])) {
         if(ctype_digit($_GET["pagina"])){           
@@ -18,9 +18,9 @@
 
     $numPaginas = ceil ($numTotalPaginas  / $postPorPagina); 
    
-    $noticias = MySQLUtils::getNewPaginacion(($paginaActual-1)*$postPorPagina,($paginaActual-1)*$postPorPagina+$postPorPagina );
+    $noticias = BaseXUtils::getNewPaginacion(($paginaActual-1)*$postPorPagina,($paginaActual-1)*$postPorPagina+$postPorPagina );
 
-    MySQLUtils::CloseSesssion();
+    BaseXUtils::CloseSesssion();
 
     require('views/noticias.view.php')
 

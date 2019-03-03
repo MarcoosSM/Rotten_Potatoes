@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bbdd>
-    <users>
-        <username>root</username>
-        <password>root</password>
-    </users>
     <news>
-        <new title="holder">Esta es una noticia</new>
+        <new>
+            <id>1</id>
+            <title>Francisco</title>
+            <content>Ismael</content>
+        </new>
+        <new>
+            <id>2</id>
+            <title>Lapina</title>
+            <content>Perez</content>
+        </new>
     </news>
+    <users>
+        <user>
+            <username>fran</username>
+            <password>fran</password>
+        </user>
+        <user>
+            <username>luis</username>
+            <password>luis</password>
+        </user>
+    </users>
 </bbdd>

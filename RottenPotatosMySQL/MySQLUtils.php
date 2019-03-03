@@ -7,13 +7,11 @@ class MySQLUtils{
 
     
     static function getNewPaginacion($ini, $fin ){
+        $statement = self::$session->prepare("SELECT id,titulo,noticia FROM noticias LIMIT $ini,$fin");
+        $statement->execute();
+        $resultado = $statement->fetchAll();
         
-        $arrayAllNews = self::getNew();
-        $arraySelectedNews = array();
-        for($i = $ini; $i <= $fin; ++$i){
-            $arraySelectedNews = $arrayAllNews[$i];
-        }
-		return $arraySelectedNews;
+		return $resultado;
             
     }
         static function getNew(){
@@ -47,8 +45,6 @@ class MySQLUtils{
         return $numeroDeNoticias;
             
     }
-    
-
     
     static function deleteNew($id){
         $statement = self::$session->prepare('DELETE FROM noticias where id = :id LIMIT 1');

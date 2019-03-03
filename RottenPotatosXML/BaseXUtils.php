@@ -10,7 +10,7 @@ class BaseXUtils{
         self::$session->query('insert node <password>'.password.'</password> into /bbdd/users');#Inserta en contraseña
     }
     
-    static function getNews(){
+    static function getNew(){
         return self::$session->query('for $new in doc(\'../potatoWebPage/bbdd.xml\')//bbdd//news//new return $new')
     }
     
@@ -23,7 +23,7 @@ class BaseXUtils{
 	}
 	
 	static function StartSesssion() {
-		self::$session = new Session("192.168.3.125", 1984, "admin", "admin");
+		self::$session = new Session("localhost", 1984, "admin", "admin");
 	}
 	
 	static function CloseSesssion() {		

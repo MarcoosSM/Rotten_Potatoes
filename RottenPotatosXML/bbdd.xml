@@ -16,10 +16,19 @@
         <user>
             <username>fran</username>
             <password>fran</password>
+            <privileges>1</privileges>
         </user>
         <user>
             <username>luis</username>
             <password>luis</password>
+            <privileges>2</privileges>
         </user>
     </users>
+    <films>
+        <film>
+            <title>Regreso al futuro</title>
+            <director>Pepe</director>
+            <synopsis>Un tio se va al pasado y flipa en colores</synopsis>
+        </film>
+    </films>
 </bbdd>

@@ -1,15 +1,18 @@
 <?php
 
-require ('../RottenPotatosXML/BaseXClient.php');
+#require ('../RottenPotatosXML/BaseXClient.php');
+require ('../RottenPotatosXML/BaseXUtils.php');
 
-try {
+
   // create session
-  $session = new Session("localhost", 1984, "admin", "admin");
+  $session = BaseXUtils::StartSession();
  
-  try {
+  #$session = new Session("localhost", 1984, "admin", "admin");
+      
     
     
-    $input = 'for $user in doc(\'../test.xml\')//bbdd//users return $user';
+    /*$input = 'for $new in doc(\'../../../RottenPotatosXML/bbdd.xml\')//bbdd//news//new where $new//content[text() contains text { \'Ismael\' } any] return $new';
+    
     // create query instance
     $query = $session->query($input);
     // bind variable
@@ -18,22 +21,16 @@ try {
     
     #$arrayPersonas = explode(" ", $frase);
     #echo $arrayPersonas;
-    $xml  = simplexml_load_string($query->execute());
+    $xml = simplexml_load_string($query->execute());
     $json = json_encode($xml);
-    $arrayNews = json_decode($json,TRUE);
-    print_r($arrayNews);
+    $arrayNews = json_decode($json,TRUE);*/
+    #BaseXUtils::deleteNew(2);
+    $arrayNews = BaseXUtils::getUsers();
+    echo $arrayNews;
     // close query instance
-    $query->close();
-  } catch (Exception $e) {
-    // print exception
-    print $e->getMessage();
-  }
+  
   // close session
-  $session->close();
-} catch (Exception $e) {
-  // print exception
-  print $e->getMessage();
-}
+    BaseXUtils::CloseSession(); 
 
 
 

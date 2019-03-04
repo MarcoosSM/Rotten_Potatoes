@@ -3,13 +3,13 @@
     <news>
         <new>
             <id>1</id>
-            <title>Francisco</title>
-            <content>Ismael</content>
+            <titleContent>Francisco</titleContent>
+            <newContent>Ismael</newContent>
         </new>
         <new>
             <id>2</id>
-            <title>Lapina</title>
-            <content>Perez</content>
+            <titleContent>Lapina</titleContent>
+            <newContent>Perez</newContent>
         </new>
     </news>
     <users>

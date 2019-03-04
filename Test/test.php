@@ -5,7 +5,7 @@ require ('../RottenPotatosXML/BaseXUtils.php');
 
 
   // create session
-  $session = BaseXUtils::StartSession();
+  BaseXUtils::StartSession();
  
   #$session = new Session("localhost", 1984, "admin", "admin");
       
@@ -24,9 +24,9 @@ require ('../RottenPotatosXML/BaseXUtils.php');
     $xml = simplexml_load_string($query->execute());
     $json = json_encode($xml);
     $arrayNews = json_decode($json,TRUE);*/
-    #BaseXUtils::deleteNew(2);
-    $arrayNews = BaseXUtils::getUsers();
-    echo $arrayNews;
+    BaseXUtils::insertUser('dfgdfg','fdgdfgfd');
+    #echo $arrayNews['user'][0]['username'];
+    print_r(BaseXUtils::getUsers());
     // close query instance
   
   // close session

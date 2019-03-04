@@ -4,7 +4,7 @@
             <?php
 				foreach ($noticias as &$noticia) {
 					echo '<div class="noticia">';
-					echo '<form action="./views/modificarNoticia.view.php" method="POST" name="">';
+					echo '<form action="./views/modificarNoticia.php" method="POST" name="">';
                     echo '<h3>'.$noticia[1].'</h3>';
 					echo '<p>'.$noticia[2].'</p>';
                     echo '<input type="submit" class ="buttonsModifyArticles" value="Modificar" name="'.$noticia[0].'"/>';

@@ -23,11 +23,13 @@
         </div>
         <div class="paginacion">
             <?php 
-                for ($i = 1; $i <= $numPaginas; $i++) {
-                    if($i==$paginaActual){
-                       echo " <a class='active' href='?pagina=$i'>$i</a></li>";
-                    }else{
-                        echo " <a href='?pagina=$i'>$i</a></li>";
+                if(isset($numPaginas)){
+                    for ($i = 1; $i <= $numPaginas; $i++) {
+                        if($i==$paginaActual){
+                           echo " <a class='active' href='?pagina=$i'>$i</a></li>";
+                        }else{
+                            echo " <a href='?pagina=$i'>$i</a></li>";
+                        }
                     }
                 }
             ?>

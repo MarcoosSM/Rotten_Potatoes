@@ -1,11 +1,34 @@
 <?php
-	require BaseXUtils.php;
-
-	$title = $_POST["titulo"];
-	$content = $_POST["noticia"];
-
-	#imodificar en la base de datos 
-
-	header("./index.php");
-				
+	#require 'BaseXUtils.php';
 ?>
+	
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Rotten Potatoes</title>
+</head>
+<body>
+    <div class="header">
+        <a href="#default" class="logo">ROTTEN POTATOES</a>
+        <div class="header-right">
+            <a href="../Index.php">Noticias</a>
+        </div>
+    </div>
+
+    <div class="articles">
+        <?php
+            require('../php_noticias/insertarNoticia.php');
+        ?>
+    </div>
+    
+    <div class="footer">
+    <h5 class="textFooter">Copyright © Alumnos de DAM - 2019</h5>
+    </div>
+</body>
+</html>
+				

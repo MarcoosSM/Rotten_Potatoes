@@ -25,7 +25,7 @@
 
     <div class="articles">
         <?php
-            require('../php_noticias/modificarNoticia.php');
+            require('../php_noticias/noticiaDiv.php');
         ?>
     </div>
     

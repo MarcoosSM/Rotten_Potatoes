@@ -45,11 +45,17 @@ class MySQLUtils{
         return $numeroDeNoticias;
             
     }
-    
     static function deleteNew($id){
         $statement = self::$session->prepare('DELETE FROM noticias where id = :id LIMIT 1');
         $statement->execute(array(':id' => $id));
             
+    }
+    
+    static function insertNew($titulo, $noticia){
+        $statement = self::$session->prepare('INSERT INTO noticias (titulo,noticia) VALUES(:titulo, :noticia)');
+        $statement->bindParam(':titulo', $titulo);
+        $statement->bindParam(':noticia', $noticia);
+        $statement->execute();
     }
     static function modifyNew($id, $titulo, $contenido){
         $statement = self::$session->prepare('UPDATE noticias SET id = :id, titulo = :titulo, noticia = :contenido where id = :id LIMIT 1');

@@ -19,8 +19,7 @@
                 </form>
             </div>
             <a class="active" href="../php_login/cerrarSesion.php">Cerrar Sesion</a>
-            <a class="active" href="../Index.php">Home</a>
-            <a href="#news">Noticias</a>
+            <a class="active" href="../Index.php">Noticias</a>
         </div>
     </div>
 

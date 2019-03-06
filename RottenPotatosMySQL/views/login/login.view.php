@@ -15,7 +15,7 @@
          </div>
       <div class="div_form">
          <form action = "" method = "post">
-            <label>Usuario:</label>
+            <label>Usuario:</label><br/>
             <input type = "text" name = "username" class = "inputBox"/><br/><br/>
             <label>Contraseña:</label>
             <input type = "password" name = "password" class = "inputBox" /><br/><br/>

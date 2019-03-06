@@ -6,6 +6,7 @@ $noticias = MySQLUtils::getNew();
 if(!empty($_POST)){
     if(isset($_POST['Enviar'])){
         MySQLUtils::insertNew($_POST['titulo'],$_POST['noticia']);
+		header('Location: ../index.php');
     }
 }
 

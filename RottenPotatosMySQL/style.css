@@ -85,7 +85,7 @@ body{
 .paginacion a { 
   float: left;
   background-color: #977350;
-  margin: 0 4px;
+  margin: 0p auto;
   padding: 15px 25px;
   color: #fff;
   text-decoration: none;

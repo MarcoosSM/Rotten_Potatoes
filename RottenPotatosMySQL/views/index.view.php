@@ -22,7 +22,7 @@
         </div>
     </div>
 
-    <div class="articles">
+    <div class="noticiasRecientes">
         <?php
             require('php_noticias/noticias.php');
         ?>

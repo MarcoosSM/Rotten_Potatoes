@@ -1,4 +1,4 @@
-<div class="noticiasRecientes paginacion">
+<div class="noticiasRecientes">
         <h2>Noticias Recientes</h2>
         <div class="contenidoCentral">
             <?php
